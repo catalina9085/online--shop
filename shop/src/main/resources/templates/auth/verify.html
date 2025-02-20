@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/auth/login.css">
+</head>
+
+<body>
+	<div class="container">
+	<h1>Verify email</h1><br><br><br>
+	
+	<p id="info">We sent a verification code to your email.The code expires in 30 minutes.</p>
+	
+	<form id="myForm">
+	<input type="text" id="verificationCode" placeholder="enter verification code" required>
+	<button type="submit">submit</button>
+	</form>
+	<form id="skipVerification" action="/auth/login">
+		<span>Skip the verification for now and log in directly.<span>
+		<button type="submit">login</button>
+	</form>
+	<form id="resendForm">
+		<span>Didn't get an email?<span>
+		<button type="submit">send again</button>
+	</form>
+	
+	<p id="errorMessage" style="color:#8B0000;"></p>
+	</div>
+	<script src="/js/auth/verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/settings/shipment.css">
+	<title>Payment</title>
+</head>
+
+<body>
+	<div class="mainContainer">
+		<h2>Shipment details:</h2>
+	<form id="shipmentForm">
+				<div><strong>First name: </strong><input type="text" id="firstName" required placeholder="first name"><br>
+				<strong>Last name: </strong><input type="text" id="lastName" required placeholder="last name"><br>
+				<strong>Country: </strong><input type="text" id="country" required placeholder="country"><br>
+				<strong>Province: </strong><input type="text" id="province" required placeholder="province"><br>
+				<strong>Town: </strong><input type="text" id="town" required placeholder="town"><br></div>
+				<div><strong>Adress1: </strong><input type="text" id="addressLine1" required placeholder="street,number"><br>
+				<strong>Adress2: </strong><input type="text" id="addressLine2" required placeholder="apartment,building"><br>
+				<strong>Postal code: </strong><input type="text" id="postalCode" required placeholder="postal code"><br>
+				<strong>Phone number: </strong><input type="text" id="phoneNumber" required placeholder="phoneNumber">
+				<button type="submit">save</button></div>
+	</form>
+	<div id="message" style="color:darkRed;font-weight:bold;margin-right:100px;"></div>
+	<div id="notifContainer" style="display:none;">
+			<div id="notification">test</div>
+			<div id="hideNotification">╳</div>
+		</div>
+		
+	</div>
+	<script src="/js/settings/shipment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+		<script src="/js/socket.js"></script>
+</body>
+
+</html>

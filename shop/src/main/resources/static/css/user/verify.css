@@ -1,0 +1,14 @@
+
+.basicContainer,body,#myForm{
+	flex-direction:column;
+}
+
+#myForm,#resendForm,.basicContainer,body{
+	display:flex;
+	justify-content:center;
+	align-items:center
+}
+
+button{
+	padding:3px;
+}

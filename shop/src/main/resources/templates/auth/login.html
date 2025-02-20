@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/auth/login.css">
+</head>
+
+<body>
+	<div class="container">
+	<h1>Login</h1><br><br>
+	<p id="info"></p>
+	<p id="error" style="color:#8B0000;"></p>
+	<form id="myForm">
+		<input type="text" id="identifier" placeholder="username/email" required> 
+		<input type="password" id="password" placeholder="password" required> 	
+		<button type="submit">login</button>
+	</form><br>
+	<div id="forms">
+	<form action="/auth/register">
+		<span>You don't have an account yet?<span>
+		<button type="submit" style="display:inline;">sign up</button>
+	</form>
+	<form action="/auth/resetPassword">
+		<span>Did you forget your password?</span>
+		<button type="submit" style="display:inline;">reset password</button>
+	</form>
+	</div>
+	</div>
+	
+	<script src="/js/auth/login.js"></script>
+	
+</body>
+
+</html>

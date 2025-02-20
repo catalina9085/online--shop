@@ -1,0 +1,88 @@
+body{
+	background-image: url('/images/acm3.jpg');
+	background-size: cover;
+	height: 100vh;
+	margin: 10px;
+	overflow-y: auto;
+	background-attachment: fixed;
+	margin:0;
+}
+
+img {
+	width: 160px;
+	height: 160px;
+	margin: 10px;
+	display: block;
+	border-radius:10px;
+	cursor:pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    border:1px solid #4C583E;
+	background-color: #4C583E;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+	transition: color 0.4s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+	background-color: white;
+	color:#4C583E;
+}
+
+button i {
+    font-size: 10px;
+}
+button:hover i{
+	color:#4C583E;
+}
+
+input {
+	padding:5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+	margin:5px;
+}
+
+input:focus {
+    border-color: #5E5A80;
+    box-shadow: 0 0 8px rgba(126, 88, 126, 0.7);
+}
+
+#notifContainer{
+	position: fixed;
+	bottom:5px;
+	left:50%;
+	transform:translateX(-50%);
+	background-color: #4C583E;
+	padding: 20px;
+	color: white;
+	width:60%;
+	border-radius:10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	
+}
+#notification a{
+	color:white;
+}
+#hideNotification{
+	font-weight:bold;
+	cursor:pointer;
+	
+}
+
+#shipmentInfo{
+	text-align:center;
+	background-color:#4C583E;
+	color:white;
+}

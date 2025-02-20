@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/settings/centerPage.css">
+
+	<title>Delete Account</title>
+</head>
+
+<body>
+	<div class="basic container">
+	<p id="message"></p>
+	<form id="deleteForm" class="basicContainer">
+		<strong>Are you sure you want to delete your account?</strong>
+		<button type="submit">delete</button>
+	</form>
+	</div>
+	
+	<script>
+		document.getElementById("deleteForm").addEventListener("submit",function(event){
+			event.preventDefault();
+			fetch("/user/settings/deleteAccount",{method:"DELETE",})
+			.then(response=>{
+				if(response.ok){
+					localStorage.setItem("message","Your account has been successfully deleted!");
+					window.location.href="/auth/login";
+				}
+			})
+			.catch(error=>{
+				document.getElementById("message").innerHTML=error.message;
+			})
+		});
+	</script>
+</body>
+</html>

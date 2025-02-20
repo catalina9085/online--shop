@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/settings/settings.css">
+	<title>Settings</title>
+	<style>
+		body {
+		    display: flex;
+		    justify-content: center;
+		    align-items: flex-start;
+		}
+		</style>
+</head>
+
+<body>
+	<div class="mainContainer">
+	<div id="top">
+	<h1>Notifications</h1>
+	<form action="/user/main">
+		<button type="submit" id="main"><i class="fas fa-home"></i></button>
+	</form>
+	</div>
+	<div id="message"></div>
+		<form id="checkForm">
+		<div id="banner">
+			<h4>Notify me about...</h4>
+			<h4>Notify me via...</h4>
+		</div>
+		<div id="options">
+		<div id="about">
+		<input type="checkbox" id="offers"><label for="offers">Special offers and discounts</label><br>
+		<input type="checkbox" id="orderStatus"><label for="orderStatus">The status of my order</label><br>
+		<input type="checkbox" id="newArrivals"><label for="newArrivals">New arrivals</label><br><br>
+		</div>
+		<div id="via">
+		<input type="checkbox" id="email"><label for="email">Email</label><br>
+		<input type="checkbox" id="push"><label for="push">In-App Notifications</label><br><br>
+		</div>
+		</div>
+		<button type="submit">save preferences</button>
+		</form>
+	<div id="notifContainer" style="display:none;">
+			<div id="notification">test</div>
+			<div id="hideNotification">╳</div>
+		</div>
+	</div>
+	<script type="module" src="/js/settings/notifications.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+		<script src="/js/socket.js"></script>
+</body>
+
+</html>

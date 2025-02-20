@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/auth/login.css">
+</head>
+
+<body>
+	<div class="container" id="container">
+	<h1>Register</h1><br><br><br>
+	<div id="error" style="color:#8B0000;"></div>
+	<div id="hidden" style="display:none;">
+		<form id="verify">
+			<span>This email is associated with an unverified account!</span><br><span>Is it you?</span>
+			<button type="submit" style="display:inline;">verify</button>
+		</form>
+	</div>
+	<form id="myForm">
+		<input type="text" id="username" placeholder="username" required>
+		<input type="text" id="email" placeholder="email" required>
+		<input type="password" id="password" placeholder="password" required>
+		<input type="password" id="confirmPassword" placeholder="confirm password" required>
+		
+		<button type="submit">submit</button>
+	</form>
+	</div>
+	<script src="/js/auth/register.js"></script>
+
+</body>
+
+</html>

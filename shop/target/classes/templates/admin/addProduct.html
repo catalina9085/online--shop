@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/admin/addNewProduct.css">
+	<title>Add new product</title>
+</head>
+
+<body>
+	<div class="mainContainer">
+	<h1>Add new product</h1>
+	<div id="message"></div>
+	<form id="addProductForm">
+		<input type="text" id="name" placeholder="product name" required><br>
+		<input type="text" id="description" placeholder="description" required><br>
+		<input type="number" id="price" placeholder="product price" required><br>
+		<input type="number" id="stock" placeholder="product stock" required><br>
+		<input type="text" id="newCategory" name="newCategory" placeholder="New category(optional)" optional><br>
+		<select id="productCategory" name="productCategory">
+			<option value="">Select a category</option>
+		</select><br>
+		<div class="flex">
+		<input type="file" id="files" multiple>
+		<div id="savingOptions" class="flex">
+			<label for="cloud"><input type="checkbox" id="cloud">Store images in cloud</label>
+			<label for="database"><input type="checkbox" id="database">Store images in database</label>
+		</div>
+		</div>
+		<br>
+		<button type="submit">add product</button>
+	</form>	
+	</div>
+	<div id="notifContainer" style="display:none;">
+		<div id="notification">test</div>
+		<div id="hideNotification">╳</div>
+	</div>
+	<script src="/js/admin/addProduct.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+			<script src="/js/socket.js"></script>
+</body>
+
+</html>

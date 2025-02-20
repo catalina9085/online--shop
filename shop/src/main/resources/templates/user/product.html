@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/user/product.css">
+	<title>Show Product</title>
+</head>
+
+<body>
+	<div id="notifContainer" style="display:none;">
+				<div id="notification">test</div>
+				<div id="hideNotification">╳</div>
+			</div>
+	<div class="mainContainer">
+	<div id="errorMessage"></div>
+	<div id="productContainer" class="container">
+		<div id="top">
+			<form action="/user/main">
+				<button type="submit" id="main"><i class="fas fa-home"></i></button>
+			</form>
+			<form action="/user/cart">
+				<button type="submit" id="wishlist"><i class="fas fa-shopping-cart"></i></button>
+			</form>
+			<form action="/user/wishList">
+				<button type="submit" id="wishlist"><i class="fas fa-heart"></i></button>
+			</form>
+			</div>
+	</div>
+	<hr>
+	<div id="reviews" class="review">
+		<div id="reviewTitle">
+		<h3>Reviews</h3>
+		<div id="reviewsInfo"></div>
+		</div>
+		
+		<form id="addReview">
+			<input type="text" id="review" required placeholder="add a review"><br>
+			Rating:
+			<span onclick="rating(1)" class="star">★</span>
+			<span onclick="rating(2)" class="star">★</span>
+			<span onclick="rating(3)" class="star">★</span>
+			<span onclick="rating(4)" class="star">★</span> 
+			<span onclick="rating(5)" class="star">★</span>
+			<button type="submit" id="postButton">post</button>
+		</form><br>
+	</div>
+	</div>
+	<script src="/js/user/product.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+		<script src="/js/socket.js"></script>
+</body>
+
+</html>

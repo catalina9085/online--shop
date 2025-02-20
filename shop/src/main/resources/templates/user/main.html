@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/user/main.css">
+</head>
+
+<body>
+	<div id="shipmentInfo">Free shipping on orders over 300 RON.  	<i class="fas fa-shopping-bag"></i></div>
+	<div id="top">
+		<div><button id="menu"><i class="fas fa-bars"></i></button></div>
+		<form id="keywordForm">
+			<input type="text" id="keyword" placeholder="search" required>
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+		<div id="buttons">
+			<form action="/user/cart">
+			<button type="submit"><i class="fas fa-shopping-cart"></i></button>
+			</form>
+	
+			<form action="/user/wishList">
+				<button type="submit"><i class="fas fa-heart"></i></button>
+			</form>
+		</div>
+	
+	</div>
+	
+	<div id="menuContainer" style="display:none;">
+			<div id="menuTop"><span>Menu</span><button id="closeMenu">╳</button></div>
+			<div id="settings"><span>Settings</span><span>⌵</span></div><hr>
+				<div id="hiddenSettingsSection" style="display:none">
+					<a href="/user/settings/shipment">> Add shipment information</a><hr>
+					<a id="manageAccount">⌵ Manage my account</a>
+						<div id="hiddenManageAccount" style="display:none;">
+							<a href="/user/settings/changePassword">> Change password</a>
+							<a href="/user/settings/deleteAccount">> Delete account</a>
+						</div>
+					<hr>
+					<a href="/user/settings/notifications">> Notifications</a><hr>
+					<a href="/user/allOrders">> Order history</a><hr>
+				</div>
+			<div th:if="${role=='ROLE_ADMIN'}">
+				<div id="admin"><span>Admin section</span><span>⌵</span></div>
+				<div id="hiddenAdminSection" style="display:none"><hr>
+					<a href="/admin/overview">> Overview</a><hr>
+					<a href="/admin/addProduct">> Add new product</a><hr>
+					<a href="/admin/products">> See all products</a><hr>
+					<a href="/admin/users">> See all users</a>
+				</div>
+			<hr></div>
+			<a href="/logout">Logout</a><hr>
+	</div>
+	<div id="mainLogo"></div>
+	
+	<div id="filter">
+		<div id="category">
+				<select id="productCategory" name="productCategory">
+					<option value="">Filter by category</option>
+				</select>
+		</div>
+		
+		<div id="price">
+			<div id="priceText">Price</div>
+			<i class="fas fa-arrow-up" id="up"></i>
+			<i class="fas fa-arrow-down" id="down"></i>
+		</div>
+		
+		<div id="recommend">
+				<select id="recommendSelect" name="recommendSelect">
+					<option value="">Recommend</option>
+					<option value="New Arrivals">New Arrivals</option>
+					<option value="Top Rated">Top Rated</option>
+				</select>
+		</div>
+	</div>
+	
+	<p id="errorMessage"></p>
+	<div id="notifContainer" style="display:none;">
+		<div id="notification">test</div>
+		<div id="hideNotification">╳</div>
+	</div>
+	<div id="productList"></div>
+	<script src="/js/user/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="/js/socket.js"></script>
+	
+</body>
+
+</html>

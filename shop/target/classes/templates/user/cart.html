@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/user/cart.css">
+	<title>Shopping cart</title>
+</head>
+
+<body>
+	<div id="shipmentInfo">Free shipping on orders over 300 RON.  	<i class="fas fa-shopping-bag"></i></div>
+
+	<div class="top" id="top">
+		<h1>Shopping cart</h1>
+		<div>
+		<form action="/user/main">
+		<button type="submit" id="main"><i class="fas fa-home"></i></button>
+		</form>
+		<form action="/user/wishList">
+		<button type="submit" id="wishlist"><i class="fas fa-heart"></i></button>
+		</form>
+		</div>
+	</div>
+	<div id="bar"><span>PRODUCT</span><span>PRICE</span><span>QTY</span><span>TOTAL</span></div>
+	<div id="notifContainer" style="display:none;">
+			<div id="notification">test</div>
+			<div id="hideNotification">╳</div>
+	</div>
+	<div id="message"></div>
+	<div id="cartItems" class="cartItems"></div>
+	<div id="finish" class="finish"></div>
+	<script src="/js/user/cart.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+		<script src="/js/socket.js"></script>
+</body>
+
+</html>

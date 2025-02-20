@@ -1,0 +1,67 @@
+ #top{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:20px;
+	margin:0;
+	background-color:#4C583E;
+	color:white;
+}
+#top button{
+	margin-right:20px;
+	background:transparent;
+	box-shadow:none;
+	border:none;
+
+}
+#top button i{
+	font-size: 25px;
+	color:white;
+	transition:color 0.4s ease;
+}
+#top button i:hover{
+	color:gray;
+}
+
+#checkForm input{
+	cursor:pointer;
+}
+		
+.mainContainer {
+	background-color: rgba(255, 255, 255, 0.8);
+	height:100%;
+	width:100%;
+}
+
+#options{
+	display:flex;
+	justify-content:center;
+	width:100%;
+	gap:40%;
+	padding-top:20px;
+}
+
+#banner{
+	display:flex;
+	justify-content:center;
+	gap:40%;
+	margin:0;
+	background-color:#93A384;
+	color:white;
+	width:100%;
+}
+
+#checkForm{
+	font-size:20px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+#checkForm button{
+	transition:background-color 0.4s ease;
+	width:20%;
+	margin:20px;
+}
+		
+		

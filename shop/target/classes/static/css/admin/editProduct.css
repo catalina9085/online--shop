@@ -1,0 +1,53 @@
+#info{
+	display:flex;
+	gap:5px;
+	align-items:flex-end;
+}
+#info button{
+	padding:3px;
+	margin-bottom:16px;
+}
+
+.imgContainer {
+   	position: relative;
+    display: inline-block;
+}
+
+.deleteButton{
+	position: absolute;
+	top: 5px; 
+	right: 5px;
+	background-color: red;
+	color: white;
+	border: none;
+	font-size: 12px;
+	border-radius: 50%;
+	 
+}
+.deleteButton:hover{
+	background-color:darkred;
+}
+
+#files{
+	box-shadow:none;
+	border:none;
+}
+#addNewFilesForm,#savingOptions{
+	display:flex;
+	flex-direction:column;
+	gap:5px;
+}
+#addNewFilesForm{
+	margin-bottom:20px;
+	border-bottom:1px solid #ccc;
+	width:100%;
+}
+#fileAction{
+	display:flex;
+	align-items:center;
+	gap:50px;
+}
+
+#stars{
+	color:#FFCA28;
+}

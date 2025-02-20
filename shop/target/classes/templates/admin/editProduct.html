@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/user/product.css">
+	<link rel="stylesheet" type="text/css" href="/css/admin/editProduct.css">
+	<title>Edit Product</title>
+</head>
+
+<body>
+	<div class="mainContainer">
+		<div id="productContainer" class="container">
+				<form id="addNewFilesForm">
+					<input type="file" id="files" multiple required>
+					<div id="fileAction">
+						<div id="savingOptions">
+							<label><input type="checkbox" id="cloud">Store images in cloud</label>
+							<label><input type="checkbox" id="database">Store images in database</label>
+						</div>
+						<button type="submit" id="addNewFilesButton">add pictures</button>
+					</div>
+				</form>
+				
+			
+				<div id="imagesContainer" class="imagesContainer"></div>
+	
+				<div id="editInfo">
+					<div id="info">
+						<div id="productInfo"></div>
+						<button id="edit">edit info</button>
+					</div>
+					<div id="hidden" style="display:none;">
+						<form id="editInfoForm">
+							<strong>Name: </strong><input type="text" id="name" ><br>
+							<strong>Description: </strong><input type="text" id="description" ><br>
+							<strong>Price: </strong><input type="number" id="price"><br>
+							<strong>Stock: </strong><input type="number" id="stock"><br>
+							<strong>Discount(optional)</strong><input type="number" min="0" max="100" step="5" placeholder="%" id="discount"><br>
+							<strong>Choose an existent category:</strong>
+							<select id="productCategory" name="productCategory">
+								<option value="" id="defaultOption">Choose a category</option>
+							</select><br>
+
+							<strong>Add a new category(optional):</strong>
+							<input type="text" id="newCategory" name="newCategory" placeholder="New category(optional)" optional><br>
+							<button type="submit" id="editInfoButton">save</button>
+						</form>	
+					</div>
+				</div>
+		</div><hr>
+		<div id="reviews" class="review">
+			<div id="reviewTitle">
+				<h3>Reviews</h3>
+				<div id="reviewsInfo"></div>
+			</div>
+		</div>
+	</div>
+	<div id="notifContainer" style="display:none;">
+		<div id="notification">test</div>
+		<div id="hideNotification">╳</div>
+	</div>
+	<script src="/js/admin/editProduct.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+				<script src="/js/socket.js"></script>
+</body>
+
+</html>

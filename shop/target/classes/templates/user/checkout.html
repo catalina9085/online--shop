@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/user/checkout.css">
+	<title>Checkout</title>
+</head>
+
+<body>
+	<div id="container">
+	<h1>Checkout</h1>
+		<div id="info">
+		<h3>Shipment details:</h3>
+		<div id="paymentInfo">
+			<strong>First name: </strong><span id="2firstName"></span><br>
+			<strong>Last name: </strong><span id="2lastName"></span><br>
+			<strong>Country: </strong><span id="2country"></span><br>
+			<strong>Province: </strong><span id="2province"></span><br>
+			<strong>Town: </strong><span id="2town"></span><br>
+			<strong>Address line 1: </strong><span id="2addressLine1"></span><br>
+			<strong>Address line 2: </strong><span id="2adressLine2"></span><br>
+			<strong>Postal code: </strong><span id="2postalCode"></span><br>
+			<strong>Phone number: </strong><span id="2phoneNumber"></span>
+			<button type="submit" id="editInfo">edit info</button><br><br>
+		</div>
+		<form id="paymentForm">
+			<div><strong>First name: </strong><input type="text" id="firstName" required placeholder="first name"><br>
+			<strong>Last name: </strong><input type="text" id="lastName" required placeholder="last name"><br>
+			<strong>Country: </strong><input type="text" id="country" required placeholder="country"><br>
+			<strong>Province: </strong><input type="text" id="province" required placeholder="province"><br>
+			<strong>Town: </strong><input type="text" id="town" required placeholder="town"><br></div>
+			<div><strong>Adress line 1: </strong><input type="text" id="addressLine1" required placeholder="street,number"><br>
+			<strong>Adress line 2: </strong><input type="text" id="addressLine2" required placeholder="building"><br>
+			<strong>Postal code: </strong><input type="text" id="postalCode" required placeholder="postal code"><br>
+			<strong>Phone number: </strong><input type="text" id="phoneNumber" required placeholder="phoneNumber">
+			<button type="submit" id="saveChanges">save changes</button><br><br></div>
+		</form>
+		</div>
+		<h3>Order overview</h3>
+		<div id="productList"></div>
+		<button type="submit" id="placeOrder">place order</button>
+		<div id="message"></div>
+	</div>	
+	</div>
+	
+	<div id="notifContainer" style="display:none;">
+				<div id="notification">test</div>
+				<div id="hideNotification">╳</div>
+		</div>
+	<script src="/js/user/checkout.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+		<script src="/js/socket.js"></script>
+</body>
+
+</html>
