@@ -2,6 +2,8 @@
 
 A simple and easy-to-use online shop where users can browse products, add them to their wishlist or cart, and place orders. The admin can manage products and users to keep the store up to date.
 
+Note: Due to the free plan on Heroku, there may be occasional delays or slower performance of the application.
+
 ## Table of Contents
 - [Live Demo](#live-demo)
 - [Usage](#usage)
